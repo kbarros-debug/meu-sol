@@ -1,0 +1,356 @@
+/* Reset e Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.site-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 1rem;
+    max-width: 42rem;
+}
+
+.hero-title {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+/* Heart Icons */
+.heart-icon {
+    color: #f472b6;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+.heart-icon.pulsing {
+    animation: pulse 2s infinite;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.heart-icon.medium {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #e11d48;
+}
+
+.heart-icon.small {
+    font-size: 1rem;
+    color: #f472b6;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Love Message Section */
+.love-message-section {
+    padding: 5rem 1rem;
+}
+
+.love-card {
+    max-width: 48rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.love-text {
+    color: #6b7280;
+    font-size: 1.125rem;
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.love-signature {
+    color: #e11d48;
+    font-weight: 500;
+}
+
+/* Memories Section */
+.memories-section {
+    padding: 5rem 1rem;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.camera-icon, .music-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    color: #e11d48;
+    font-size: 1.875rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.section-description {
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+.memories-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .memories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-title {
+        font-size: 3.75rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+    
+    .love-card {
+        padding: 3rem;
+    }
+}
+
+.memory-card {
+    background: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.memory-card:hover {
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.memory-image-container {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+
+.memory-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.memory-card:hover .memory-image {
+    transform: scale(1.05);
+}
+
+.memory-content {
+    padding: 1.5rem;
+}
+
+.memory-title {
+    color: #be185d;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.memory-description {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+/* Music Section */
+.music-section {
+    padding: 5rem 1rem;
+}
+
+.playlist-card {
+    max-width: 32rem;
+    margin: 0 auto;
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.playlist-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.playlist-item:last-child {
+    margin-bottom: 0;
+}
+
+.playlist-item:hover {
+    background-color: #fef7f7;
+}
+
+.song-number {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: linear-gradient(135deg, #f472b6, #e11d48);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.song-info {
+    flex: 1;
+}
+
+.song-title {
+    color: #be185d;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.song-artist {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+/* Footer */
+.footer {
+    padding: 3rem 1rem;
+    background: linear-gradient(90deg, #ec4899, #e11d48);
+    color: white;
+}
+
+.footer-content {
+    max-width: 32rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer .heart-icon.pulsing {
+    color: #fce7f3;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-text {
+    color: #fce7f3;
+    margin-bottom: 0.5rem;
+}
+
+.footer-copyright {
+    color: #f9a8d4;
+    font-size: 0.875rem;
+}
+
+/* Responsividade adicional */
+@media (max-width: 640px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .love-card {
+        padding: 1.5rem;
+    }
+    
+    .love-text {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Melhorias de acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    .pulsing {
+        animation: none;
+    }
+    
+    .memory-image,
+    .memory-card {
+        transition: none;
+    }
+}
